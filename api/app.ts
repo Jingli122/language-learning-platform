@@ -4,12 +4,11 @@ import cors from 'cors'
 import path from 'path'
 import dotenv from 'dotenv'
 import { fileURLToPath } from 'url'
-import authRoutes from './routes/auth.js'
-import coursesRoutes from './routes/courses.js'
-import practiceRoutes from './routes/practice.js'
-import progressRoutes from './routes/progress.js'
-import communityRoutes from './routes/community.js'
-import achievementsRoutes from './routes/achievements.js'
+import companiesRoutes from './routes/companies.js'
+import transactionsRoutes from './routes/transactions.js'
+import accountsRoutes from './routes/accounts.js'
+import vouchersRoutes from './routes/vouchers.js'
+import reportsRoutes from './routes/reports.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -22,12 +21,11 @@ app.use(cors())
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true, limit: '10mb' }))
 
-app.use('/api/auth', authRoutes)
-app.use('/api/courses', coursesRoutes)
-app.use('/api/practice', practiceRoutes)
-app.use('/api/progress', progressRoutes)
-app.use('/api/community', communityRoutes)
-app.use('/api/achievements', achievementsRoutes)
+app.use('/api/companies', companiesRoutes)
+app.use('/api/transactions', transactionsRoutes)
+app.use('/api/accounts', accountsRoutes)
+app.use('/api/vouchers', vouchersRoutes)
+app.use('/api/reports', reportsRoutes)
 
 app.use('/api/health', (req, res) => {
   res.status(200).json({
