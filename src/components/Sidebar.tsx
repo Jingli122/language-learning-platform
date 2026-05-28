@@ -4,10 +4,10 @@ import {
   MessageSquare, 
   FileText, 
   BarChart3, 
-  User,
-  PieChart,
-  TrendingUp,
-  Wallet,
+  Settings,
+  BookOpen,
+  CheckSquare,
+  Database,
   ChevronDown,
   Menu,
   X
@@ -35,13 +35,23 @@ const menuItems: MenuItem[] = [
       { label: '利润表', path: '/reports/profit' },
     ]
   },
-  { id: 'zhangtao', label: '张涛管理', icon: User, path: '/zhangtao' },
+  { 
+    id: 'basic-settings', 
+    label: '基础设置', 
+    icon: Settings, 
+    path: '/settings',
+    children: [
+      { label: '科目设置', path: '/settings/accounts' },
+      { label: '辅助核算', path: '/settings/auxiliary' },
+    ]
+  },
+  { id: 'account-set', label: '账套管理', icon: Database, path: '/account-set' },
 ];
 
 export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [expandedItems, setExpandedItems] = useState<string[]>(['reports']);
+  const [expandedItems, setExpandedItems] = useState<string[]>(['reports', 'basic-settings']);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleSubmenu = (id: string) => {

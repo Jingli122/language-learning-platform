@@ -5,7 +5,9 @@ import Vouchers from '@/pages/Vouchers';
 import BalanceSheet from '@/pages/reports/BalanceSheet';
 import CashFlow from '@/pages/reports/CashFlow';
 import Profit from '@/pages/reports/Profit';
-import Zhangtao from '@/pages/Zhangtao';
+import AccountSettings from '@/pages/settings/AccountSettings';
+import AuxiliaryAccounting from '@/pages/settings/AuxiliaryAccounting';
+import AccountSet from '@/pages/AccountSet';
 
 export default function App() {
   return (
@@ -20,7 +22,9 @@ export default function App() {
               <Route path="/reports/balance" element={<BalanceSheet />} />
               <Route path="/reports/cashflow" element={<CashFlow />} />
               <Route path="/reports/profit" element={<Profit />} />
-              <Route path="/zhangtao" element={<Zhangtao />} />
+              <Route path="/settings/accounts" element={<AccountSettings />} />
+              <Route path="/settings/auxiliary" element={<AuxiliaryAccounting />} />
+              <Route path="/account-set" element={<AccountSet />} />
             </Routes>
           </div>
         </main>
