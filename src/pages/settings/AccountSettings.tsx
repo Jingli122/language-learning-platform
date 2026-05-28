@@ -123,8 +123,8 @@ export default function AccountSettings() {
     const isExpanded = expandedIds.includes(account.id);
 
     return (
-      <div key={account.id}>
-        <tr className="hover:bg-gray-50">
+      <>
+        <tr key={account.id} className="hover:bg-gray-50">
           <td className="px-4 py-3">
             <div className="flex items-center" style={{ paddingLeft: `${level * 24}px` }}>
               {account.hasChildren && (
@@ -164,11 +164,9 @@ export default function AccountSettings() {
           </td>
         </tr>
         {account.hasChildren && isExpanded && account.children && (
-          <>
-            {account.children.map(child => renderAccount(child, level + 1))}
-          </>
+          account.children.map(child => renderAccount(child, level + 1))
         )}
-      </div>
+      </>
     );
   };
 
