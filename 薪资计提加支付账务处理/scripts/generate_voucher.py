@@ -18,10 +18,10 @@ DEFAULT_ACCOUNT_MAPPING = {
         "研发费用": {"code": "5301010101", "name": "研发支出_费用化支出_职工薪酬_工资", "auxiliary": ["部门", "职员"]},
     },
     "payable_account": {"code": "221101", "name": "应付职工薪酬_工资"},
-    "social_insurance_account": {"code": "122101", "name": "其他应收款_社会/医疗保险费"},
-    "housing_fund_account": {"code": "122102", "name": "其他应收款_住房公积金"},
-    "tax_account": {"code": "222101", "name": "应交税费_应交个人所得税"},
-    "bank_account": {"code": "100201", "name": "银行存款"},
+    "social_insurance_account": {"code": "122105", "name": "其他应收款_社会/医疗保险费"},
+    "housing_fund_account": {"code": "122106", "name": "其他应收款_住房公积金"},
+    "tax_account": {"code": "222108", "name": "应交税费_个人所得税"},
+    "bank_account": {"code": "100206", "name": "银行存款_锦鲤银行"},
 }
 
 
